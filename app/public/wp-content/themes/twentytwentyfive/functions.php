@@ -557,22 +557,15 @@ if ( ! function_exists( 'twentytwentyfive_custom_header_styles' ) ) :
 				height: 3px;
 				background-color: #005286 !important;
 			}
-			/* See All News Button */
-			.see-all-news-button .wp-block-button__link {
-				background-color: transparent !important;
-				color: #333333 !important;
-				border: 1px solid #cccccc !important;
-				border-radius: 0.25rem !important;
-				padding: 0.5rem 1rem !important;
-				font-family: "Roboto Neue", "RobotoNeue", sans-serif !important;
-				font-size: 0.9375rem !important;
-				text-decoration: none !important;
-				transition: all 0.25s ease !important;
-			}
-			.see-all-news-button .wp-block-button__link:hover {
-				background-color: #f5f5f5 !important;
-				border-color: #999999 !important;
-			}
+            /* Unified outline button style */
+            .outline-button {
+                border: 1px solid #1f497d !important;
+                color: #1f497d !important;
+                background-color: #ffffff !important;
+                border-radius: 10px !important;
+                padding: 0.5rem 1rem !important;
+                text-decoration: none !important;
+            }
 			/* Featured Article Cards - 3 column grid layout */
 			.featured-articles-section .wp-block-post-template {
 				display: grid !important;
@@ -603,10 +596,16 @@ if ( ! function_exists( 'twentytwentyfive_custom_header_styles' ) ) :
 				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
 				transform: translateY(-2px);
 			}
-			/* Card Content Padding */
-			.featured-article-card > * {
-				padding-left: 1.25rem !important;
-				padding-right: 1.25rem !important;
+			/* Card Content Padding - consistent padding for text content */
+			.featured-article-card > *:not(.wp-block-post-featured-image) {
+				padding-left: 1.5rem !important;
+				padding-right: 1.5rem !important;
+			}
+			.featured-article-card .wp-block-post-date,
+			.featured-article-card .wp-block-post-title,
+			.featured-article-card .wp-block-post-excerpt {
+				padding-left: 1.5rem !important;
+				padding-right: 1.5rem !important;
 			}
 			.featured-article-card .wp-block-post-featured-image {
 				padding: 0 !important;
@@ -619,14 +618,15 @@ if ( ! function_exists( 'twentytwentyfive_custom_header_styles' ) ) :
 				height: auto !important;
 				display: block !important;
 			}
-			/* Article Date with calendar icon */
+			/* Article Date with calendar icon - light gray */
 			.article-date,
 			.featured-article-card .wp-block-post-date {
 				color: #999999 !important;
 				font-size: 0.875rem !important;
 				font-family: "Roboto Neue", "RobotoNeue", sans-serif !important;
-				margin-bottom: 0.9375rem !important;
-				margin-top: 1.25rem !important;
+				font-weight: 400 !important;
+				margin-bottom: 0.75rem !important;
+				margin-top: 1.5rem !important;
 				padding-top: 0 !important;
 				position: relative;
 			}
@@ -641,32 +641,34 @@ if ( ! function_exists( 'twentytwentyfive_custom_header_styles' ) ) :
 				color: #999999 !important;
 				text-decoration: none !important;
 			}
-			/* Article Title */
+			/* Article Title - vibrant blue color */
 			.article-title,
 			.featured-article-card .wp-block-post-title {
 				font-family: "Roboto Neue", "RobotoNeue", sans-serif !important;
 				font-weight: 700 !important;
 				font-size: 1.125rem !important;
-				color: #333333 !important;
+				color: #005286 !important;
 				margin-bottom: 0.9375rem !important;
 				line-height: 1.4 !important;
 			}
 			.article-title a,
 			.featured-article-card .wp-block-post-title a {
-				color: inherit !important;
+				color: #005286 !important;
 				text-decoration: none !important;
 			}
 			.article-title a:hover,
 			.featured-article-card .wp-block-post-title a:hover {
-				color: #005286 !important;
+				color: #003f66 !important;
+				text-decoration: underline !important;
 			}
-			/* Article Excerpt/Description */
+			/* Article Excerpt/Description - medium gray, sans-serif */
 			.article-excerpt,
 			.featured-article-card .wp-block-post-excerpt {
-				font-family: "Athelas", "AthelasRegular", Georgia, serif !important;
+				font-family: "Roboto Neue", "RobotoNeue", sans-serif !important;
 				font-size: 0.9375rem !important;
+				font-weight: 400 !important;
 				line-height: 1.6 !important;
-				color: #666666 !important;
+				color: #777777 !important;
 				margin: 0 !important;
 				padding-bottom: 1.5rem !important;
 			}
@@ -945,8 +947,8 @@ if ( ! function_exists( 'twentytwentyfive_inject_featured_articles_after_banner_
 		<div class="wp-block-group alignwide featured-articles-header" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;margin-bottom:3rem;gap:var(--wp--preset--spacing--40)">
 			<h2 class="wp-block-heading featured-articles-heading" style="margin:0;padding:0;padding-bottom:0.5rem;position:relative">Featured Articles</h2>
 			<div class="wp-block-buttons">
-				<div class="wp-block-button see-all-news-button">
-					<a class="wp-block-button__link wp-element-button" href="/news/">See All News →</a>
+                <div class="wp-block-button see-all-news-button">
+                    <a class="wp-block-button__link wp-element-button outline-button" href="/news/">See All News →</a>
 				</div>
 			</div>
 		</div>

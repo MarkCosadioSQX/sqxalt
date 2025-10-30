@@ -14,38 +14,7 @@
 		<h3 class="wp-block-heading banner-subtitle">Stay informed with the latest insights, SEC filings, and industry events</h3>
 		<!-- /wp:heading -->
 
-		<!-- wp:buttons -->
-		<div class="wp-block-buttons">
-			<!-- wp:button {"className":"banner-button"} -->
-			<div class="wp-block-button banner-button"><a class="wp-block-button__link wp-element-button">Explore More News</a></div>
-			<!-- /wp:button -->
-		</div>
-		<!-- /wp:buttons -->
-		</div>
-		<!-- /wp:group -->
-	</div>
-	<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
-
-<!-- Featured Articles Section -->
-<!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)">
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|40"},"layout":{"flexWrap":"wrap","justifyContent":"space-between"}},"layout":{"type":"flex"}} -->
-		<div class="wp-block-group alignwide featured-articles-header" style="gap:var(--wp--preset--spacing--40);justify-content:space-between">
-		<!-- wp:heading {"level":2,"className":"featured-articles-heading"} -->
-		<h2 class="wp-block-heading featured-articles-heading">Featured Articles</h2>
-		<!-- /wp:heading -->
 		
-		<!-- wp:buttons -->
-		<div class="wp-block-buttons">
-			<!-- wp:button {"className":"see-all-news-button"} -->
-			<div class="wp-block-button see-all-news-button"><a class="wp-block-button__link wp-element-button" href="/news/">See All News →</a></div>
-			<!-- /wp:button -->
-		</div>
-		<!-- /wp:buttons -->
 		</div>
 		<!-- /wp:group -->
 	</div>
@@ -53,37 +22,106 @@
 </div>
 <!-- /wp:group -->
 
-<!-- wp:group {"align":"full","className":"featured-articles-section","style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull featured-articles-section" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)">
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
-		<div class="wp-block-group alignwide">
-			<!-- wp:query {"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"post_tag":["featured"]}},"align":"full","layout":{"type":"default"}} -->
-			<div class="wp-block-query alignfull">
-				<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
-				<!-- wp:group {"className":"featured-article-card","style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group featured-article-card">
-					<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","style":{"border":{"radius":"8px"},"spacing":{"margin":{"bottom":"var:preset|spacing|20"}}}} /-->
-					<!-- wp:post-date {"isLink":false,"style":{"typography":{"fontSize":"0.875rem"},"spacing":{"margin":{"bottom":"var:preset|spacing|15"}}},"className":"article-date"} /-->
-					<!-- wp:post-title {"isLink":true,"fontSize":"large","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|15"}}},"className":"article-title"} /-->
-					<!-- wp:post-excerpt {"excerptLength":30,"moreText":"","style":{"typography":{"fontSize":"0.9375rem","lineHeight":"1.6"}},"className":"article-excerpt"} /-->
-				</div>
-				<!-- /wp:group -->
-				<!-- /wp:post-template -->
-				<!-- wp:query-no-results -->
-				<!-- wp:paragraph -->
-				<p>No featured articles found.</p>
-				<!-- /wp:paragraph -->
-				<!-- /wp:query-no-results -->
-			</div>
-			<!-- /wp:query -->
-		</div>
-		<!-- /wp:group -->
-	</div>
-	<!-- /wp:group -->
+
+
+<!-- SEC Filings Section -->
+<!-- wp:group {"align":"full","className":"sec-filings-section","style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull sec-filings-section" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)">
+    <!-- wp:group {"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group">
+        <!-- wp:columns {"align":"wide","className":"sec-two-col"} -->
+        <div class="wp-block-columns alignwide sec-two-col">
+            <!-- wp:column {"width":"60%"} -->
+            <div class="wp-block-column" style="flex-basis:60%">
+                <!-- wp:group {"className":"sec-filings-header","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+                <div class="wp-block-group sec-filings-header">
+                    <!-- wp:heading {"level":2,"className":"featured-articles-heading","style":{"spacing":{"padding":{"top":"0","bottom":"0.5rem"},"margin":{"top":"0","bottom":"0"}},"position":{"type":"relative"}}} -->
+                    <h2 class="wp-block-heading featured-articles-heading" style="margin:0;padding:0;padding-bottom:0.5rem;position:relative">New SEC Filings</h2>
+                    <!-- /wp:heading -->
+                    <!-- wp:buttons {"className":"sec-filings-viewall"} -->
+                    <div class="wp-block-buttons sec-filings-viewall"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button outline-button" href="/sec-filings">View All →</a></div></div>
+                    <!-- /wp:buttons -->
+                </div>
+                <!-- /wp:group -->
+
+                <!-- Panel with rows -->
+                <!-- wp:group {"className":"sec-panel","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group sec-panel">
+                    <!-- Row 1 -->
+                    <div class="sec-row"><div class="sec-date">10/28</div><div class="sec-title">US ENERGY CORP</div><div class="sec-code"><a href="https://www.sec.gov/Archives/edgar/data/101594/000143774925032023/xslF345X05/rdgdoc.xml" target="_blank" rel="noopener">4</a></div></div>
+                    <!-- Row 2 -->
+                    <div class="sec-row"><div class="sec-date">10/28</div><div class="sec-title">Northern Lights Fund Trust</div><div class="sec-code"><a href="https://www.sec.gov/Archives/edgar/data/1314414/000158064225006788/winton_497k.htm" target="_blank" rel="noopener">497K</a></div></div>
+                    <!-- Row 3 -->
+                    <div class="sec-row"><div class="sec-date">10/28</div><div class="sec-title">Northern Lights Fund Trust</div><div class="sec-code"><a href="https://www.sec.gov/Archives/edgar/data/1314414/000158064225006787/winton-497.htm" target="_blank" rel="noopener">497</a></div></div>
+                    <!-- Row 4 -->
+                    <div class="sec-row"><div class="sec-date">10/28</div><div class="sec-title">FS Specialty Lending Fund</div><div class="sec-code"><a href="https://www.sec.gov/Archives/edgar/data/1501729/000110465925103250/tm2529573d1_1512g.htm" target="_blank" rel="noopener">15-12G</a></div></div>
+                    <!-- Row 5 -->
+                    <div class="sec-row"><div class="sec-date">10/28</div><div class="sec-title">FS Specialty Lending Fund</div><div class="sec-code"><a href="https://www.sec.gov/Archives/edgar/data/1501729/000110465925103249/tm2529572d1_n54c.htm" target="_blank" rel="noopener">N-54C</a></div></div>
+                </div>
+                <!-- /wp:group -->
+                <!-- wp:html -->
+                <script>
+                (function(){
+                  function wireSecRows(){
+                    var rows = document.querySelectorAll('.sec-panel .sec-row');
+                    rows.forEach(function(row){
+                      if (row.dataset.linkApplied) return;
+                      var link = row.querySelector('.sec-code a');
+                      if (!link || !link.href) return;
+                      row.dataset.linkApplied = '1';
+                      row.setAttribute('role','link');
+                      row.setAttribute('tabindex','0');
+                      row.addEventListener('click', function(e){
+                        if (e.target && e.target.closest('a')) return;
+                        if (link.target === '_blank') window.open(link.href, '_blank');
+                        else window.location.href = link.href;
+                      });
+                      row.addEventListener('keydown', function(e){
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          if (link.target === '_blank') window.open(link.href, '_blank');
+                          else window.location.href = link.href;
+                        }
+                      });
+                    });
+                  }
+                  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wireSecRows);
+                  else wireSecRows();
+                })();
+                </script>
+                <!-- /wp:html -->
+            </div>
+            <!-- /wp:column -->
+
+            <!-- wp:column {"width":"40%"} -->
+            <div class="wp-block-column" style="flex-basis:40%">
+                <!-- wp:group {"className":"sponsor-card","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group sponsor-card">
+                    <!-- wp:heading {"level":3} -->
+                    <h3 class="wp-block-heading">Featured Sponsor</h3>
+                    <!-- /wp:heading -->
+                    
+                    <!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"sponsor-logo"} -->
+                    <figure class="wp-block-image size-full sponsor-logo"><img src="/wp-admin/images/uploads/satori_logo_vert-2.png" alt="Satori Capital logo" style="max-width:100%;height:auto"/></figure>
+                    <!-- /wp:image -->
+                    <!-- wp:paragraph -->
+                    <p>Satori Capital is a Dallas-based investment firm specializing in sustainable and responsible private equity and alternative investments.</p>
+                    <!-- /wp:paragraph -->
+                    <!-- wp:buttons -->
+                    <div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button outline-button" href="#">Learn More</a></div></div>
+                    <!-- /wp:buttons -->
+                </div>
+                <!-- /wp:group -->
+            </div>
+            <!-- /wp:column -->
+        </div>
+        <!-- /wp:columns -->
+    </div>
+    <!-- /wp:group -->
 </div>
 <!-- /wp:group -->
+
+
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group" style="margin-top:0">

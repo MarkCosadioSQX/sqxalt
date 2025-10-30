@@ -6,3 +6,14 @@ a {
 	text-decoration-thickness: 1px !important;
 	text-underline-offset: .1em;
 }
+
+/* Enforce brand paragraph typography inside the block editor */
+.editor-styles-wrapper p,
+.editor-styles-wrapper .block-editor-rich-text__editable,
+.editor-styles-wrapper .wp-block-paragraph p {
+	font-family: "Athelas", Georgia, "Times New Roman", Times, serif !important;
+	color: #000000 !important;
+	font-size: 18pt !important;
+	line-height: 1.5 !important;
+	font-weight: 400 !important;
+}
